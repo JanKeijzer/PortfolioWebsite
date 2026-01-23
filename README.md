@@ -70,10 +70,14 @@ https://docs.docker.com/get-started/get-docker/
 
 3. **Start the server**
    ```bash
-   chmod +x start_server.sh
    ./start_server.sh
    ```
-   Visit `http://localhost:8000` to see your site.
+   Visit `http://localhost:8040` to see your site.
+
+   To stop the server:
+   ```bash
+   docker stop mkdocs-server
+   ```
 
 ## Customizing Your Portfolio
 
