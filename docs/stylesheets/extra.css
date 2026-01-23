@@ -1,39 +1,72 @@
-/* Light theme custom colors */
+/* Typography - Imperial Automation Brand (Arial/system-ui per guidelines) */
+:root {
+  --md-text-font: system-ui, -apple-system, Arial, sans-serif;
+  --md-code-font: "Roboto Mono", monospace;
+}
+
+/* Light theme custom colors - Imperial Automation Brand */
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #000111;
-  --md-accent-fg-color: #2856f7;
+  --md-primary-fg-color: #1E3A8A; /* Navy - primary brand color */
+  --md-accent-fg-color: #3B82F6; /* Blue - secondary brand color */
   --md-typeset-a-color: var(--md-accent-fg-color);
   --md-footer-bg-color: var(--md-primary-fg-color);
+  --md-default-bg-color: #F3F4F6; /* Light grey background */
+  --md-typeset-color: #1A1A1A; /* Black for text */
 }
 
-/* Dark theme custom colors */
+/* Dark theme custom colors - Imperial Automation Brand */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #000111;
-  --md-default-bg-color: #090d1d;
-  --md-accent-fg-color: #8e92f8;
+  --md-primary-fg-color: #1E3A8A; /* Navy - keep consistent */
+  --md-default-bg-color: #090d1d; /* Dark background */
+  --md-accent-fg-color: #93C5FD; /* Light blue for dark mode */
   --md-typeset-a-color: var(--md-accent-fg-color);
+  --md-code-bg-color: #1A1A1A;
 }
 
-/* Dark Theme Custom Button */
+/* Primary Button - Navy background, white text (per brand guidelines) */
+.md-button--primary {
+  background-color: #1E3A8A;
+  color: white;
+  border-color: #1E3A8A;
+}
+
+.md-button--primary:hover {
+  background-color: #3B82F6;
+  border-color: #3B82F6;
+}
+
+/* CTA Button - Gold background, navy text (per brand guidelines) */
+.md-button.cta {
+  background-color: #FCD34D;
+  color: #1E3A8A;
+  border-color: #FCD34D;
+}
+
+.md-button.cta:hover {
+  background-color: #FDE68A;
+  border-color: #FDE68A;
+}
+
+/* Dark mode button adjustments */
 [data-md-color-scheme="slate"] .md-button {
-  background-color: var(--md-accent-fg-color);
-  border-color: var(--md-accent-fg-color);
+  background-color: #93C5FD;
+  border-color: #93C5FD;
+  color: #1A1A1A;
 }
 
-/* Optional: Custom hover effects */
 [data-md-color-scheme="slate"] .md-button:hover {
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
+  background-color: #FDE68A;
+  border-color: #FDE68A;
+  color: #1A1A1A;
 }
 
-/* Footer Section */
+/* Footer Section - Imperial Automation Brand */
 .md-footer {
-  background-color: #090d1d;
+  background-color: #1E3A8A; /* Navy */
 }
 
 .md-footer-meta {
-  background-color: #000111;
+  background-color: #1A1A1A; /* Black */
 }
 
 /* Testimonial cards */
