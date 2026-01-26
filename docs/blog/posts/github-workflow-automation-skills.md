@@ -16,7 +16,7 @@ What if you could compress that entire workflow into a single command that takes
 
 <!-- more -->
 
-## The Problem: GitHub Issue Management is Death by a Thousand Clicks
+## The Problem: GitHub Issue Management Takes Too Much Time
 
 Here's what managing a complex feature traditionally looks like:
 
