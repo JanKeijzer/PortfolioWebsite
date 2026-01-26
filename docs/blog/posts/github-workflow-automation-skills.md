@@ -55,43 +55,7 @@ The key insight: **AI augmentation requires systematic tooling, not ad-hoc promp
 
 I built six interconnected skills that handle the entire lifecycle of complex GitHub issues:
 
-```mermaid
-graph TB
-    Start[Large GitHub Issue #723] --> Decompose["/decompose 723"]
-    Decompose --> TrackingPR[Draft Tracking PR Created]
-    Decompose --> SubIssues["Sub-Issues Created<br/>#724, #725, #726"]
-
-    SubIssues --> Work1[Work on #724]
-    Work1 --> Bug["/bug 'Found issue'"]
-    Bug --> BugIssue["Bug Issue #730<br/>Auto-added to Tracking PR"]
-
-    Work1 --> Complete1[Complete #724]
-    Complete1 --> Update1["/update-tracking"]
-    Update1 --> Progress["Status Table Updated<br/>Progress: 33%"]
-
-    SubIssues --> Work2[Work on #725]
-    Work2 --> Complete2[Complete #725]
-    Complete2 --> Update2["/update-tracking"]
-    Update2 --> Progress2["Progress: 67%"]
-
-    Progress2 --> NeedMore{More work<br/>needed?}
-    NeedMore -->|Yes| Extend["/extend 723"]
-    Extend --> NewSubs["New Sub-Issues<br/>#733, #734"]
-    NewSubs --> MoreWork[Continue Working...]
-
-    NeedMore -->|No| AllDone[All Sub-Issues Complete]
-    MoreWork --> AllDone
-    AllDone --> Sync["/sync-closes"]
-    Sync --> Verify["Verify All Closes<br/>Statements Present"]
-    Verify --> Merge[Merge Tracking PR]
-    Merge --> AutoClose["All Issues Auto-Close<br/>#723, #724, #725, #726, #730"]
-
-    style Start fill:#e1f5fe
-    style Decompose fill:#fff3e0
-    style TrackingPR fill:#f3e5f5
-    style Merge fill:#c8e6c9
-    style AutoClose fill:#a5d6a7
-```
+![GitHub Workflow Automation - Complete Lifecycle](images/workflow-diagram.svg)
 
 ### The Workflow in Action
 

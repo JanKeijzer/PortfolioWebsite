@@ -83,11 +83,7 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.details
   - pymdownx.critic
   - pymdownx.emoji:
@@ -98,7 +94,6 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
 
 copyright: |
   &copy; 2025 - <a href="https://imperial-automation.eu" target="_blank" rel="noopener">Imperial Automation</a>. All rights reserved.
