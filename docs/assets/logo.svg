@@ -44,7 +44,7 @@
      transform="rotate(-7 22 35)"
      id="rect13" />
   <path
-     d="M35 60 L55 10 L75 60 L64 60 L55 38 L46 60 Z"
+     d="M35 60 L45 14 Q55 9 65 14 L75 60 L64 60 Q55 39 46 60 Z"
      fill="url(#gradHoriz)"
      id="path15" />
   <circle

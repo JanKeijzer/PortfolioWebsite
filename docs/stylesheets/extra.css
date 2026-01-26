@@ -4,6 +4,8 @@
   --md-code-font: "Roboto Mono", monospace;
 }
 
+/* Keep site name visible - using horizontal logo with text */
+
 /* Light theme custom colors - Imperial Automation Brand */
 [data-md-color-scheme="default"] {
   --md-primary-fg-color: #1E3A8A; /* Navy - primary brand color */
