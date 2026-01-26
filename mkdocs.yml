@@ -5,6 +5,12 @@ site_url: https://jan-keijzer.nl
 nav:
   - Home:
     - About: index.md
+  - Experience:
+    - Overview: experience/index.md
+    - Zintouch - Healthcare: experience/zintouch.md
+    - DirectorInsight - Finance: experience/directorinsight.md
+    - ABN AMRO - Banking: experience/abn-amro.md
+    - ESA & Defense: experience/esa-defense.md
     # - Projects:
     #   - portfolio/projects/project-1.md
     #   - portfolio/projects/project-2.md
