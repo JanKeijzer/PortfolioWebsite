@@ -22,5 +22,5 @@ COPY . .
 # Expose port 8000
 EXPOSE 8000
 
-# Command to run mkdocs
-CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000"]
+# Command to run mkdocs with live reload
+CMD ["mkdocs", "serve", "-a", "0.0.0.0:8000", "--livereload"]

@@ -1,31 +1,32 @@
 ---
 title: About Me
-description: Explore AI, data science, and entrepreneurship with Dave Ebbelaar. Learn about Datalumina, AI tutorials, freelancing, and innovative AI solutions for businesses.
-keywords: Dave Ebbelaar, AI entrepreneur, Datalumina, AI tutorials, Data Freelancer, GenAI Launchpad
-author: Dave Ebbelaar
-canonical_url: https://www.daveebbelaar.com/
+description: AI Automation Consultant helping European businesses transform operational bottlenecks into sustainable growth. 30+ years of full-stack development expertise across healthcare, aerospace, defense, and finance.
+keywords: Jan Imperial Automation, AI automation consultant, process automation, business automation, AI solutions Europe, operational efficiency
+author: Jan
+canonical_url: https://www.imperialautomation.com/
 ---
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Dave Ebbelaar",
-  "url": "https://www.daveebbelaar.com/",
-  "image": "https://avatars.githubusercontent.com/u/34709402?v=4",
-  "sameAs": [
-    "https://www.youtube.com/channel/UCn8ujwUInbJkBhffxqAPBVQ",
-    "https://www.youtube.com/@daveebbelaar",
-    "https://www.linkedin.com/in/daveebbelaar/",
-    "https://github.com/daveebbelaar"
-    "https://www.skool.com/@daveebbelaar"
-  ],
-  "jobTitle": "Founder & CEO",
+  "name": "Jan",
+  "url": "https://jan-keijzer.nl",
+  "jobTitle": "Founder & AI Automation Consultant",
   "worksFor": {
     "@type": "Organization",
-    "name": "Datalumina",
-    "url": "https://www.datalumina.com/"
+    "name": "Imperial Automation",
+    "url": "https://www.imperial-automation.eu/"
   },
+  "alumniOf": [{
+    "@type": "EducationalOrganization",
+    "name": "Leiden University"
+  },
+  {
+    "@type": "EducationalOrganization",
+    "name": "Delft University of Technology"
+  }],
+  "knowsAbout": ["AI Automation", "Process Optimization", "Full-Stack Development", "Enterprise Systems"]
 }
 </script>
 
@@ -33,27 +34,27 @@ canonical_url: https://www.daveebbelaar.com/
 
 <div class="text-intro-grid" markdown>
 
-# Turn AI complexity into your competitive advantage
+# Turn friction into flow
 
-### I have 5+ years experience doing just that
+### 30+ years turning complex technical challenges into business results
 
-- Are you struggling to keep up with the rapid pace of AI innovation?
+- Is your team losing hours to repetitive tasks that should be automated?
 
-- Do you need help translating AI hype into real business results?
+- Are operational bottlenecks preventing your business from scaling?
 
-- Want to implement AI effectively before competitors get ahead?
+- Do you need someone who can both architect and build the solution?
 
-- Looking for technical expertise and a clear roadmap for AI solutions?
+- Looking for proven expertise across multiple industries and technologies?
 
-- Need someone who understands both technical and business perspectives?
+- Want a consultant who delivers working systems, not just slide decks?
 
-[Book Free Intro Call :material-arrow-top-right:](https://www.calendly.com){ .md-button .md-button--primary }
+[Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
 
 <div class="profile-image-grid" markdown>
 
-![Dave Ebbelaar, AI Entrepreneur and Educator](assets/@daveebbelaar.jpg){ .profile-image alt="Portrait of Dave Ebbelaar, AI entrepreneur and educator" }
+![Jan, AI Automation Consultant](assets/profile.jpg){ .profile-image alt="Portrait of Jan, AI Automation Consultant at Imperial Automation" }
 
 </div>
 
@@ -61,109 +62,119 @@ canonical_url: https://www.daveebbelaar.com/
 
 ## About me
 
-Hi! I'm Dave, an entrepreneur and educator from the Netherlands. I work with technical professionals facing the overwhelming pace of AI innovation and businesses struggling to translate AI hype into competitive advantage. Whether you're a developer watching your skills becoming obsolete or a company unsure how to implement AI effectively—the challenge is the same: how to effectively use this technology before your competitors do.
+I'm Jan, an AI automation consultant based in the Netherlands, working with European businesses that are ready to transform operational bottlenecks into competitive advantages. If your organization is losing valuable time to manual processes, struggling to scale operations, or watching competitors pull ahead with smarter systems—I can help you change that.
 
-My artificial intelligence journey spans over a decade, with bachelor's and master's degrees in the field and experience building custom data and AI systems across utilities, government, and e-commerce sectors. My tech stack includes Python, PostgreSQL, ML, FastAPI, OpenAI, Claude, Azure, vector databases, RAG, and LLM integration for enterprise applications.
+My background is anything but typical for this field. I hold a PhD in Nuclear Reactor Physics from TU Delft, which gave me a rigorous foundation in complex systems thinking and analytical problem-solving. Over the past three decades, I've built mission-critical systems across healthcare, aerospace, defense, and finance—sectors where downtime costs lives, money, or missions. From 24/7 alarm systems to banking platforms with financial penalties for outages, I've learned to build systems that simply cannot fail.
+
+I've helped scale companies like DirectorInsight and Zintouch from small teams to 40-50 employees, engineering infrastructure to support 100% YoY user growth. In 2025, I earned my certification as a Datalumina AI Engineer, combining my deep development expertise with cutting-edge AI capabilities.
+
+My tech stack spans Python, modern AI frameworks, API development, database architecture, and enterprise integration. But more importantly, I understand how technology serves business goals—not the other way around.
 
 ## Why work with me?
 
-Here's what sets me apart and how I can help drive value for your business:
+Here's what sets me apart and how I can help transform your operations:
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-building-user:{ .lg .middle } Proven Business Experience
+-   :fontawesome-solid-cogs:{ .lg .middle } Builder, Not Just Advisor
 
     ---
 
-    As the founder of Datalumina, I bring entrepreneurial insight to every project. I understand both the technical and business sides of AI implementation, ensuring solutions that deliver real ROI and align with your business goals.
+    I don't hand you a report and walk away. I architect solutions, build them hands-on, or lead your dev team to delivery. You get a technical co-founder mindset applied to your automation challenges—someone who writes the code, not just the recommendations.
 
--   :material-youtube:{ .lg .middle } Educator & Communicator
-
-    ---
-
-    My experience as a content creator and educator means I can break down complex technical concepts into clear, actionable insights. You'll always understand the 'why' behind technical decisions and get clear progress updates.
-
--   :material-school:{ .lg .middle } Industry Expert
+-   :material-chart-line:{ .lg .middle } Proven Scale Experience
 
     ---
 
-    With over a decade in AI and data science, including work across utilities, government, and e-commerce sectors, I bring battle-tested expertise to your projects. My solutions are built on real-world experience, not just theory.
+    I've built the systems that enabled companies to grow from small teams to 40-50 employees. I understand what breaks at scale and how to build automation that grows with your business, not against it.
 
--   :material-rocket:{ .lg .middle } Fast Implementation
+-   :material-shield-check:{ .lg .middle } Enterprise-Grade Background
 
     ---
 
-    I specialize in rapid development and deployment of AI solutions. Using modern tools and proven frameworks, I can help you move from concept to production faster, giving you a competitive edge in today's fast-paced market.
+    Three decades across healthcare, aerospace, defense, and finance means I understand compliance, security, and reliability requirements. Your automation will be built to standards that matter.
+
+-   :material-head-lightbulb:{ .lg .middle } Scientific Rigor
+
+    ---
+
+    A PhD trains you to solve problems others consider impossible. I bring that same analytical depth to understanding your bottlenecks and designing solutions that address root causes, not symptoms.
+
+-   :material-server-network:{ .lg .middle } Mission-Critical Mindset
+
+    ---
+
+    Three decades building systems where failure isn't an option—from life-safety alarm systems to financial trading platforms with downtime penalties, from spacecraft systems to national infrastructure. I design for zero-downtime upgrades and build reliability into every layer.
 
 </div>
 
-## What my past clients say about my work
+## Industries & expertise
 
-<div class="grid cards testimonials" markdown>
+<div class="grid cards" markdown>
 
--   :material-format-quote-open:{ .lg .middle } Adrian Dragomir
-    
-    Founder at Sferal
+-   :material-hospital-building:{ .lg .middle } Healthcare
 
     ---
 
-    "Dave is a true professional and my collaboration with him has been flawless. **He took his time and spent 3 days with me and my team in Mamaia, Romania where he was a guest for 3 sessions of my podcast Waves of AI**. He is one of the most competent people I know that has a real understanding of how AI works and how to integrate it quickly in your company."
+    Built mission-critical alarm systems at Zintouch requiring 24/7 availability where downtime could cost lives. Supported year-over-year user base doubling through management dashboards, third-party integrations, and expanded alarm system support—all while maintaining zero-downtime upgrades. Deep experience with GDPR, medical data standards, and high-stakes reliability.
 
--   :material-format-quote-open:{ .lg .middle } Barbara van den Bosch
-    
-    Founder at Viverve
+-   :material-finance:{ .lg .middle } Finance
 
     ---
 
-    "Together with Datalumina, we developed a tailor-made program where I, as a school leader, can now bring together vast amounts of information in one place and automate key tasks. **Beyond the tremendous quality improvement for our organization, working with Datalumina was an extremely pleasant experience**."
+    Developed solutions at DirectorInsight for financial reporting and analysis, scaling 24/7 infrastructure to support global users and year-over-year user growth doubling. Experience with regulatory requirements, audit trails, and the precision financial systems demand.
 
--   :material-format-quote-open:{ .lg .middle } Rene Raaphorst
-    
-    Founder at Crypto Insiders
+-   :material-airplane:{ .lg .middle } Aerospace & Defense
 
     ---
 
-    "My experience with Datalumina has been excellent. **They think along with you every step of the way, from proof of concept to a fully functional product**. I was amazed by the quality of the results and found the collaboration very enjoyable. I highly recommend Dave and Datalumina to everyone!"
+    Worked with ESA, TNO, and Atos on spacecraft and defense systems where failure isn't an option—once in space, there are no repairs. This background shapes how I approach reliability and testing in every project.
 
--   :material-format-quote-open:{ .lg .middle } Kelsen
-    
-    Founder at Datavisum
+-   :material-bank:{ .lg .middle } Banking & Trading
 
     ---
 
-    "I am thankful for having come across Dave and Data Freelancer, it was one of the best investment decisions I've made in 2024. **From effective ways to create inbound marketing strategies using social media, through solution architecture design to address all kinds of business challenges**, you will extract a great deal of value from diverse perspectives."
+    Built trading systems at ABN AMRO with financial penalties for downtime. When missed orders cost real money and market opportunities vanish in seconds, you learn to build systems that never fail.
+
+-   :material-office-building:{ .lg .middle } Enterprise Integration
+
+    ---
+
+    Specialized in connecting disparate systems, automating data flows, and building bridges between legacy infrastructure and modern AI capabilities.
 
 </div>
 
 ## Frequently asked questions
 
-??? note "How quickly can you start working on my project?"
-    I can typically begin new projects within 1-2 weeks of contract signing. For urgent matters, I maintain some flexibility for rapid response situations and can potentially start sooner - just let me know your timeline during our initial consultation.
+??? note "What kind of automation projects do you take on?"
+    I focus on high-ROI automation opportunities—processes that consume significant manual effort, create bottlenecks, or prevent scaling. This includes document processing, data pipeline automation, workflow optimization, and AI-enhanced business processes. I'm selective about projects to ensure I can deliver meaningful results.
 
-??? note "Do you require a minimum project size or commitment?"
-    While I can accommodate projects of any size, I find that engagements of at least 20 hours allow for meaningful impact. This gives us enough time to understand your data, implement solutions, and deliver actionable results. We can start with a small pilot project to ensure we're a good fit.
+??? note "Do you work remotely with European clients?"
+    Yes, Imperial Automation is built for remote collaboration across Europe. I use modern communication tools, provide regular progress updates, and can accommodate different time zones. For larger engagements, I'm available for on-site workshops when needed.
 
-??? note "What industries do you have experience in?"
-    I've successfully delivered projects across e-commerce, manufacturing, healthcare, and financial services. While I specialize in data science fundamentals that apply across sectors, I particularly excel in projects involving customer behavior analysis, process optimization, and predictive modeling.
+??? note "What's your approach to a new project?"
+    I start with a focused discovery phase to understand your bottleneck, quantify the impact, and identify the right solution approach. I provide a clear proposal with expected ROI before any development begins. No surprises, no scope creep.
 
-??? note "How do you handle data security and confidentiality?"
-    I take data security extremely seriously. I sign comprehensive NDAs before starting any project, use enterprise-grade encryption for all data transfers, and follow industry best practices for data handling. I can also work within your existing security infrastructure and policies.
+??? note "How do you handle data security?"
+    With my background in defense and healthcare, security isn't an afterthought—it's foundational. I sign comprehensive NDAs, follow enterprise security practices, and can work within your existing security infrastructure. GDPR compliance is standard.
 
-??? note "What's your pricing structure?"
-    I offer both project-based and retainer pricing models. Project fees are based on scope, complexity, and value delivered rather than hours worked. For ongoing support, I offer flexible retainer packages. Let's discuss your specific needs during our consultation to determine the most cost-effective approach.
+??? note "What's your pricing model?"
+    I work on a project basis with clear deliverables and timelines. Pricing reflects the value delivered and complexity involved, not hours logged. For ongoing automation support, I offer retainer arrangements. Let's discuss your specific situation to find the right structure.
 
-??? note "How do you communicate progress and results?"
-    I maintain clear communication through weekly progress updates and regular check-in meetings. You'll receive detailed documentation of all analyses, findings, and recommendations. For ongoing projects, I provide interactive dashboards and reports that allow you to track progress and results in real-time.
+??? note "How quickly can you start?"
+    Typically within 1-2 weeks of agreement. For urgent situations, I can often accommodate faster starts. The discovery phase usually takes 1-2 weeks, followed by a detailed proposal before development begins.
 
+??? note "What if we're not sure automation is the right solution?"
+    That's exactly what the initial strategy call is for. I'll help you evaluate whether automation makes sense for your situation, estimate potential ROI, and identify the best approach. No obligation, no pressure—just honest assessment.
 
 <div class="grid cards" style="margin-top: 3rem" markdown>
 
--   :material-coffee:{ .lg .middle } Let's have a virtual coffee together!
+-   :material-coffee:{ .lg .middle } Let's discuss your bottleneck
 
     ---
-    
-    Want to see if we're a match? Let's have a chat and find out. Schedule a free 30-minute strategy session to discuss your AI challenges and explore how we can work together.
 
-    [Book Free Intro Call :material-arrow-top-right:](https://calendly.com){ .md-button .md-button--primary }
+    Every automation journey starts with understanding the problem. Schedule a free 30-minute strategy call to explore your challenges and see if we're a good fit.
+
+    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>

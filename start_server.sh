@@ -7,8 +7,9 @@ if ! docker image inspect mkdocs-site >/dev/null 2>&1; then
 fi
 
 echo "Starting MkDocs server..."
-docker run --rm -d \
+docker run -d \
     --name mkdocs-server \
+    --restart unless-stopped \
     -p 8040:8000 \
     -v "$(pwd)":/docs \
     mkdocs-site
