@@ -1,7 +1,7 @@
 ---
 date: 2024-09-15
 authors:
-  - daveebbelaar
+  - jan
 categories:
   - Tools
   - Quick Tips

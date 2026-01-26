@@ -5,8 +5,11 @@ site_url: https://jan-keijzer.nl
 nav:
   - Home:
     - About: index.md
-  - Blog:
-    - blog/index.md 
+    # - Projects:
+    #   - portfolio/projects/project-1.md
+    #   - portfolio/projects/project-2.md
+  # - Blog:
+  #   - blog/index.md 
 
 theme:
   name: material
