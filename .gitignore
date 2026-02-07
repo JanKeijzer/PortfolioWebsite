@@ -97,3 +97,5 @@ target/
 
 # MkDocs build output
 site/
+CLAUDE.md
+docs/assets/profile490x490.xcf
