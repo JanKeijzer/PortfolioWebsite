@@ -1,18 +1,18 @@
 ---
 title: About Me
 description: AI Automation Consultant helping European businesses transform operational bottlenecks into sustainable growth. 30+ years of full-stack development expertise across healthcare, aerospace, defense, and finance.
-keywords: Jan Imperial Automation, AI automation consultant, process automation, business automation, AI solutions Europe, operational efficiency
-author: Jan
-canonical_url: https://www.imperialautomation.com/
+keywords: Jan Keijzer, AI automation consultant, process automation, business automation, AI solutions Europe, operational efficiency
+author: Jan Keijzer
+canonical_url: https://jan-keijzer.nl/
 ---
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Jan",
+  "name": "Jan Keijzer",
   "url": "https://jan-keijzer.nl",
-  "jobTitle": "Founder & AI Automation Consultant",
+  "jobTitle": "AI Automation Consultant",
   "worksFor": {
     "@type": "Organization",
     "name": "Imperial Automation",
@@ -48,13 +48,13 @@ canonical_url: https://www.imperialautomation.com/
 
 - Want a consultant who delivers working systems, not just slide decks?
 
-[Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+[Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
 
 <div class="profile-image-grid" markdown>
 
-![Jan, AI Automation Consultant](assets/profile.jpg){ .profile-image alt="Portrait of Jan, AI Automation Consultant at Imperial Automation" }
+![Jan Keijzer, AI Automation Consultant](assets/profile.jpg){ .profile-image alt="Portrait of Jan Keijzer, AI Automation Consultant" }
 
 </div>
 
@@ -69,6 +69,8 @@ My background is anything but typical for this field. I hold a PhD in Nuclear Re
 I've helped scale companies like DirectorInsight and Zintouch from small teams to 40-50 employees, engineering infrastructure to support 100% YoY user growth. In 2025, I earned my certification as a Datalumina AI Engineer, combining my deep development expertise with cutting-edge AI capabilities.
 
 My tech stack spans Python, modern AI frameworks, API development, database architecture, and enterprise integration. But more importantly, I understand how technology serves business goals—not the other way around.
+
+I work through [Imperial Automation](https://imperial-automation.eu), my consultancy focused on AI-powered process automation for European businesses. For business inquiries, project scoping, or formal proposals, visit [imperial-automation.eu](https://imperial-automation.eu).
 
 ## Why work with me?
 
@@ -150,7 +152,7 @@ Here's what sets me apart and how I can help transform your operations:
     I focus on high-ROI automation opportunities—processes that consume significant manual effort, create bottlenecks, or prevent scaling. This includes document processing, data pipeline automation, workflow optimization, and AI-enhanced business processes. I'm selective about projects to ensure I can deliver meaningful results.
 
 ??? note "Do you work remotely with European clients?"
-    Yes, Imperial Automation is built for remote collaboration across Europe. I use modern communication tools, provide regular progress updates, and can accommodate different time zones. For larger engagements, I'm available for on-site workshops when needed.
+    Yes, I'm fully set up for remote collaboration across Europe. I use modern communication tools, provide regular progress updates, and can accommodate different time zones. For larger engagements, I'm available for on-site workshops when needed.
 
 ??? note "What's your approach to a new project?"
     I start with a focused discovery phase to understand your bottleneck, quantify the impact, and identify the right solution approach. I provide a clear proposal with expected ROI before any development begins. No surprises, no scope creep.
@@ -175,6 +177,6 @@ Here's what sets me apart and how I can help transform your operations:
 
     Every automation journey starts with understanding the problem. Schedule a free 30-minute strategy call to explore your challenges and see if we're a good fit.
 
-    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+    [Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>

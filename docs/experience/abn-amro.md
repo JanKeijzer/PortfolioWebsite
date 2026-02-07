@@ -70,7 +70,7 @@ Banking sector work taught me to build automation where stakes are high:
 
     Let's discuss how banking sector discipline can strengthen your business systems.
 
-    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+    [Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
 
