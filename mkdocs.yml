@@ -1,4 +1,4 @@
-site_name: Imperial Automation
+site_name: Jan Keijzer
 site_description: AI automation consultant with 30+ years mission-critical systems experience
 site_url: https://jan-keijzer.nl
 
@@ -46,8 +46,8 @@ theme:
       primary: custom
       accent: custom
   font: false
-  logo: assets/logo-icon-80.png
-  favicon: assets/favicon.png
+  logo: assets/profile80x80.png
+  favicon: assets/favicon-jk.png
 
 extra:
   generator: true
@@ -93,7 +93,8 @@ markdown_extensions:
   - pymdownx.keys
 
 extra_javascript:
+  - javascripts/extra.js
   - https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js
 
 copyright: |
-  &copy; 2025 - <a href="https://imperial-automation.eu" target="_blank" rel="noopener">Imperial Automation</a>. All rights reserved.
+  &copy; 2025 Jan Keijzer &mdash; <a href="https://imperial-automation.eu" target="_blank" rel="noopener">Imperial Automation</a>
