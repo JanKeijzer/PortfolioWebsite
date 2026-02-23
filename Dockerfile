@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
     pngquant \
     && rm -rf /var/lib/apt/lists/*
 
-# Install mkdocs-material with imaging support
-RUN pip install "mkdocs-material[imaging]"
+# Install mkdocs-material with imaging support and plugins
+RUN pip install "mkdocs-material[imaging]" "mkdocs-redirects"
 
 WORKDIR /docs
 

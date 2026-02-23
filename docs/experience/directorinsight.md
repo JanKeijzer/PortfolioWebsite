@@ -81,7 +81,7 @@ Financial SaaS taught me to build automation that enterprises can trust:
 
     Let's discuss how financial sector discipline can elevate your automation initiatives.
 
-    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+    [Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
 

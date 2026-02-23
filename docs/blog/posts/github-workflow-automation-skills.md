@@ -1,5 +1,5 @@
 ---
-date: 2025-01-26
+date: 2026-01-26
 authors:
   - jan
 categories:
@@ -47,7 +47,7 @@ Instead of fighting with GitHub's UI or writing one-off scripts, I built a suite
 
 ### What Are Claude Code Skills?
 
-[Claude Code](https://www.anthropic.com/claude/code) is Anthropic's CLI tool that brings Claude's AI capabilities directly into your terminal. Skills are markdown-based extensions that teach Claude new workflows. Think of them as specialized functions that Claude can execute on your behalf.
+[Claude Code](https://claude.com/product/claude-code) is Anthropic's CLI tool that brings Claude's AI capabilities directly into your terminal. Skills are markdown-based extensions that teach Claude new workflows. Think of them as specialized functions that Claude can execute on your behalf.
 
 The key insight: **AI augmentation requires systematic tooling, not ad-hoc prompts.** Skills capture process knowledge and make it repeatable.
 
@@ -81,11 +81,11 @@ The starting point for any complex feature. This skill analyzes a parent issue a
 ```markdown
 ## Proposed Sub-Issues for #723: Stripe Payment Provider
 
-| # | Sub-Issue Title | Depends On | Scope |
-|---|-----------------|------------|-------|
-| 1 | Phase 1: Payment Abstraction Layer | - | Backend |
-| 2 | Phase 2: Stripe Integration | #1 | Backend |
-| 3 | Phase 3: Frontend Payment UI | #1, #2 | Frontend |
+| #   | Sub-Issue Title                    | Depends On | Scope    |
+| --- | ---------------------------------- | ---------- | -------- |
+| 1   | Phase 1: Payment Abstraction Layer | -          | Backend  |
+| 2   | Phase 2: Stripe Integration        | #1         | Backend  |
+| 3   | Phase 3: Frontend Payment UI       | #1, #2     | Frontend |
 
 Create these sub-issues? (A/B/C)
 ```
@@ -127,20 +127,20 @@ After merging a few sub-issue PRs, update the tracking PR to reflect current pro
 
 **Before:**
 ```markdown
-| # | Sub-Issue | Status | PR |
-|---|-----------|--------|-----|
-| 1 | #724 - Abstraction Layer | ⏳ Pending | - |
-| 2 | #725 - Stripe Integration | ⏳ Pending | - |
+| #   | Sub-Issue                 | Status    | PR  |
+| --- | ------------------------- | --------- | --- |
+| 1   | #724 - Abstraction Layer  | ⏳ Pending | -   |
+| 2   | #725 - Stripe Integration | ⏳ Pending | -   |
 
 Progress: 0/2 (0%)
 ```
 
 **After:**
 ```markdown
-| # | Sub-Issue | Status | PR |
-|---|-----------|--------|-----|
-| 1 | #724 - Abstraction Layer | ✅ Complete | #731 |
-| 2 | #725 - Stripe Integration | 🔄 In Progress | #732 |
+| #   | Sub-Issue                 | Status        | PR   |
+| --- | ------------------------- | ------------- | ---- |
+| 1   | #724 - Abstraction Layer  | ✅ Complete    | #731 |
+| 2   | #725 - Stripe Integration | 🔄 In Progress | #732 |
 
 Progress: 1/2 (50%)
 ```
@@ -217,13 +217,13 @@ These encode mission-critical discipline into every step, ensuring nothing falls
 
 Let's quantify the time savings across a typical month:
 
-| Task | Before | After | Per Month | Saved |
-|------|--------|-------|-----------|-------|
-| Decompose 5 features | 15 min × 5 | 2 min × 5 | 75 min vs 10 min | **65 min** |
-| Update tracking 20× | 5 min × 20 | 1 min × 20 | 100 min vs 20 min | **80 min** |
-| Create 10 bug issues | 5 min × 10 | 0.5 min × 10 | 50 min vs 5 min | **45 min** |
-| Sync before merge 5× | 5 min × 5 | 1 min × 5 | 25 min vs 5 min | **20 min** |
-| Extend tracking 3× | 10 min × 3 | 2 min × 3 | 30 min vs 6 min | **24 min** |
+| Task                 | Before     | After        | Per Month         | Saved      |
+| -------------------- | ---------- | ------------ | ----------------- | ---------- |
+| Decompose 5 features | 15 min × 5 | 2 min × 5    | 75 min vs 10 min  | **65 min** |
+| Update tracking 20×  | 5 min × 20 | 1 min × 20   | 100 min vs 20 min | **80 min** |
+| Create 10 bug issues | 5 min × 10 | 0.5 min × 10 | 50 min vs 5 min   | **45 min** |
+| Sync before merge 5× | 5 min × 5  | 1 min × 5    | 25 min vs 5 min   | **20 min** |
+| Extend tracking 3×   | 10 min × 3 | 2 min × 3    | 30 min vs 6 min   | **24 min** |
 
 **Total monthly savings: 234 minutes (3.9 hours)**
 
@@ -306,7 +306,7 @@ Users need to see what's happening (especially with GitHub API calls), but too m
 
 The `gh` CLI is powerful but has subtle behaviors (like how it handles multi-line PR bodies). Skills need to use heredocs and proper escaping.
 
-## Connection to Imperial Automation's Mission
+## Why This Matters
 
 This project embodies what I mean by **AI augmentation for mission-critical systems**:
 
@@ -323,7 +323,7 @@ The meta-lesson: **Effective AI augmentation requires treating automation itself
 
 Want to build your own Claude Code skills? Here's how to start:
 
-1. **Install Claude Code**: Follow the instructions at [claude.com/claude-code](https://www.anthropic.com/claude/code)
+1. **Install Claude Code**: Follow the instructions at [claude.com/product/claude-code](https://claude.com/product/claude-code)
 
 2. **Create a skill directory:**
 ```bash
@@ -359,6 +359,19 @@ The user provides: `$ARGUMENTS`
 ```
 
 The complete source for my issue management skills is available in my `~/.claude/skills/` directory. Check the [README.md](https://github.com/anthropics/claude-code) for detailed documentation.
+
+## Get the Skills
+
+All six issue management skills plus the workflow automation skills are now available as open source:
+
+**[View on GitHub →](https://github.com/JanKeijzer/claude-code-toolkit)**
+
+The repository includes:
+
+- Complete skill source code for all 9 skills
+- Installation instructions
+- Usage examples and demos
+- Best practices guide
 
 ## What's Next?
 

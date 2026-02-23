@@ -78,7 +78,7 @@ Healthcare taught me to build automation that businesses can actually depend on:
 
     Let's discuss how mission-critical engineering discipline can transform your business processes.
 
-    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+    [Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
 

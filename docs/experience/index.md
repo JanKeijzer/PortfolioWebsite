@@ -66,6 +66,6 @@ When you hire someone to automate critical business processes, you need confiden
 
     Let's discuss how mission-critical engineering discipline can transform your automation initiatives.
 
-    [Book Free Strategy Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
+    [Book a Free Call :material-arrow-top-right:](https://calendly.com/imperial-automation/introduction-call){ .md-button .md-button--primary target="_blank" rel="noopener" }
 
 </div>
