@@ -27,8 +27,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install mkdocs-material
-        run: pip install "mkdocs-material[imaging]"
+      - name: Install dependencies
+        run: pip install "mkdocs-material[imaging]" "mkdocs-redirects"
 
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force
