@@ -72,6 +72,9 @@ plugins:
       blog_dir: blog
       authors_file: "{blog}/.authors.yml"
       categories: true
+  - redirects:
+      redirect_maps:
+        'blog/2025/01/26/automating-github-workflows-with-custom-claude-code-skills/index.md': 'blog/posts/github-workflow-automation-skills.md'
 
 markdown_extensions:
   - attr_list
