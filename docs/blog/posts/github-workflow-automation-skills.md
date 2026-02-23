@@ -1,5 +1,5 @@
 ---
-date: 2025-01-26
+date: 2026-01-26
 authors:
   - jan
 categories:
