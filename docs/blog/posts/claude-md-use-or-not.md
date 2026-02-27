@@ -12,9 +12,9 @@ description: Academic research says CLAUDE.md files don't help coding agents. My
 
 *Why academic research on context files tells a different story than daily practice with AI coding agents.*
 
-<!-- more -->
-
 ![Research vs. Practice — academic benchmarks show context files don't help, but daily experience tells a different story](images/claude-md-research-vs-practice.png)
+
+<!-- more -->
 
 Last week I came across a paper from researchers at ETH Zürich that made me pause: *"Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?"* Their conclusion is surprising at first glance: context files like CLAUDE.md and AGENTS.md do **not** make coding agents better. In fact, auto-generated context files make them 3% **worse** on average, while increasing costs by over 20%.
 
