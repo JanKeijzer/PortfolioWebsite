@@ -1,0 +1,1478 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cursor's FastRender project used hundreds of AI agents to build a browser in a week. Six weeks later, what can we actually learn from it?">
+      
+      
+      
+        <link rel="canonical" href="https://jan-keijzer.nl/blog/2026/02/28/fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding/">
+      
+      
+        <link rel="prev" href="../../27/claudemd-doesnt-work-say-researchers-but-is-that-true/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon-jk.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>FastRender: What Cursor's AI Browser Experiment Teaches Us About Agentic Coding - Jan Keijzer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/hero.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="FastRender: What Cursor's AI Browser Experiment Teaches Us About Agentic Coding - Jan Keijzer" />
+<meta property="og:description" content="Cursor's FastRender project used hundreds of AI agents to build a browser in a week. Six weeks later, what can we actually learn from it?" />
+<meta property="og:image" content="https://jan-keijzer.nl/assets/images/social/blog/2026/02/28/fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://jan-keijzer.nl/blog/2026/02/28/fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="FastRender: What Cursor's AI Browser Experiment Teaches Us About Agentic Coding - Jan Keijzer" />
+<meta property="twitter:description" content="Cursor's FastRender project used hundreds of AI agents to build a browser in a week. Six weeks later, what can we actually learn from it?" />
+<meta property="twitter:image" content="https://jan-keijzer.nl/assets/images/social/blog/2026/02/28/fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Jan Keijzer" class="md-header__button md-logo" aria-label="Jan Keijzer" data-md-component="logo">
+      
+  <img src="../../../../../assets/profile80x80.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jan Keijzer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FastRender: What Cursor's AI Browser Experiment Teaches Us About Agentic Coding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../experience/" class="md-tabs__link">
+          
+  
+  
+  Experience
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Jan Keijzer" class="md-nav__button md-logo" aria-label="Jan Keijzer" data-md-component="logo">
+      
+  <img src="../../../../../assets/profile80x80.png" alt="logo">
+
+    </a>
+    Jan Keijzer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experience
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Experience
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/zintouch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zintouch - Healthcare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/directorinsight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DirectorInsight - Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/abn-amro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ABN AMRO - Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/esa-defense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESA & Defense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai-augmentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Augmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai-augmented-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Augmented Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/customer-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/developer-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Productivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/innovation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Innovation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../../../../../../assets/profile.jpg" alt="Jan Keijzer">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://www.linkedin.com/in/jankeijzer/">Jan Keijzer</a>
+                        
+                      </strong>
+                      <br>
+                      AI Automation Consultant | 30+ Years Mission-Critical Systems Experience
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-02-28 00:00:00+00:00" class="md-ellipsis">February 28, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/ai-augmented-development/">AI-Augmented Development</a>, 
+                              <a href="../../../../category/developer-productivity/">Developer Productivity</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              8 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-happened" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happened
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-code-looks-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the code looks like
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it cost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-others-did-since" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What others did since
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-research-says" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the research says
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-can-learn-from-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What we can learn from this
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="fastrender-what-cursors-ai-browser-experiment-teaches-us-about-agentic-coding">FastRender: What Cursor's AI Browser Experiment Teaches Us About Agentic Coding</h1>
+<p><em>Cursor had hundreds of AI agents build a browser in a week. Three million lines of Rust. Six weeks later: one developer with one agent built the same thing in 20,000 lines. What does that tell us about multi-agent coding?</em></p>
+<p><img alt="FastRender: what Cursor's AI browser experiment teaches us about agentic coding" src="../../../../images/fastrender-browser-experiment.png" /></p>
+<!-- more -->
+
+<p><em>A note upfront: developments in AI move fast. The research I reference here dates from mid-2025 to early 2026. Claims that hold today may be outdated in a few months. I include dates for each study. Read with that context in mind.</em></p>
+<p>In mid-January, Michael Truell, CEO of Cursor, announced that hundreds of AI agents had built a web browser in one week [1]. Three million lines of Rust code. Thousands of files. A custom rendering engine with HTML parsing, CSS cascade, layout, text shaping and a JavaScript VM.</p>
+<p>Six weeks later, the dust has settled. A good moment to look at what we can learn from this. Both from the project itself and from the reactions it provoked.</p>
+<h2 id="what-happened">What happened</h2>
+<p>Cursor engineer Wilson Lin started FastRender as a personal side project in November 2025 [2]. He wanted to test how well frontier models like Claude Opus 4.5 and GPT-5.1 handle complex tasks. A browser rendering engine was a good choice: very ambitious, but well specified through existing web standards. And you can visually see whether it works.</p>
+<p>When results with individual agents looked promising, it escalated into an official Cursor research project. Hundreds of GPT-5.2 agents (Cursor's own wording; some sources mention up to 2,000 [10]) worked together non-stop for almost a week. The architecture consisted of three roles. <strong>Planners</strong> explored the codebase and created tasks. <strong>Workers</strong> executed tasks and pushed commits. <strong>Judge agents</strong> evaluated per cycle whether work was good enough or needed to be redone. The WhatWG and CSS-WG web standards were included as git submodules, so agents could consult reference material [2].</p>
+<p>The result: over one million lines of Rust (three million according to the CEO on X), spread across thousands of files. Demos showed that simple websites like GitHub, Wikipedia and CNN rendered in a rudimentary way [2].</p>
+<h2 id="what-the-code-looks-like">What the code looks like</h2>
+<p>When developers cloned the repo, problems started [4]. <code>cargo check</code> produced dozens of errors and about a hundred warnings. All CI runs on the main branch failed. Looking back through git history, there was not a single commit that compiled cleanly [4, 5].</p>
+<p>The "from scratch" claim also turned out to be more nuanced. The dependency list includes html5ever (Servo's HTML parser), cssparser (Servo's CSS parser) and rquickjs (a JavaScript runtime). These are core components from Mozilla's Servo browser engine [5]. Wilson Lin responded that the JS VM, DOM, paint systems and text pipeline were built as part of the project [6]. A Servo maintainer called the code a "tangle of spaghetti", but gave the backhanded compliment that at least it was not copied from existing implementations [7].</p>
+<p>The Dutch Software Improvement Group (SIG) conducted a formal analysis in February 2026 using their Sigrid platform [8]. The codebase corresponds to roughly 110 person-years of Rust development. The maintainability score is 1.3 out of 5, placing it in the bottom 5% of all systems SIG sees on the market. Architecture quality scores 2.1 out of 5. That indicates tightly coupled components and low modularity. Changes to FastRender take on average four times longer than in a four-star codebase [8].</p>
+<p>Cursor's blog post created the impression of a working prototype, but included no reproducible demo, no build instructions and no known-good commit [4].</p>
+<h2 id="what-it-cost">What it cost</h2>
+<p>Estimates vary, but the picture is consistent: this was expensive. The Register estimated 10-20 trillion tokens and several million dollars [7]. A GitHub issue put the cost at 5-6 million dollars [9]. The Decoder mentioned costs in the high five to six figures [10].</p>
+<h2 id="what-others-did-since">What others did since</h2>
+<p>Two weeks after FastRender, "embedding-shapes", the same developer who first critically examined Cursor's claims, published the project <strong>one-agent-one-browser</strong> [11]. In three days, this developer used a single Codex CLI agent to build 20,000 lines of Rust into a browser that successfully renders HTML and CSS. Without external Rust crate dependencies. Simon Willison installed the 1MB binary, tested it on his blog and was positively surprised [12].</p>
+<p>He also admitted: he had thought building a browser was the perfect problem to demonstrate massively parallel agent setups, because it could not be achieved in a few thousand lines of code by a single agent. Turns out it could [13]. That is an interesting finding in itself.</p>
+<p>In parallel, <strong>HiWave</strong> appeared, a privacy-first browser with "RustKit", also a custom engine in Rust. With pixel-perfect visual parity tests against Chrome 120 baselines [14].</p>
+<p>Cursor itself built a Windows emulator, a Java LSP implementation and an Excel clone alongside FastRender. All as test cases for GPT-5.2's agent capabilities [1].</p>
+<h2 id="what-the-research-says">What the research says</h2>
+<p>This is where it gets most interesting for me. The studies I reference below date from March 2025 to January 2026. Given the pace of developments, it is worth weighing the date of each study.</p>
+<p><strong>METR Time Horizons (March 2025, updated January 2026).</strong> Research institute METR showed that the duration of tasks AI agents can complete autonomously (with 50% reliability) is growing exponentially. The doubling time is approximately 7 months [15]. In the 2024-2025 period, this accelerated to every 4 months [16]. But there is an important nuance in how METR defines tasks: they must be coherent, self-contained units that cannot be trivially split. Solving a thousand separate one-hour problems is not a thousand-hour task but a one-hour task done a thousand times [15]. FastRender looks more like the latter: many small tasks in parallel, not one coherent whole.</p>
+<p>MIT Technology Review raised concerns about the METR graph in February 2026 [17]. The error margins are large. And the measurements are primarily based on coding tasks, not software development in the broader sense.</p>
+<p><strong>METR Developer Productivity Study (July 2025).</strong> In a controlled experiment with 16 experienced open-source developers, developers using AI tools were 19% slower than without. While they believed they were 20% faster [18]. A perception gap of 39 percentage points. This does not mean AI is useless. It means that in July 2025, we were still learning how to use it effectively. Whether this has improved since is unknown. The researchers themselves acknowledge that learning effects may only become visible after hundreds of hours [18].</p>
+<p><strong>Google DORA Report (2025).</strong> A 90% increase in AI adoption correlated with 9% more bugs, 91% more code review time and 154% larger pull requests [19]. That is not an argument against AI. It is a signal that how we use it matters.</p>
+<p><strong>Multi-agent vs. single-agent.</strong> The Decoder reported in January 2026 that single agents achieve up to five times more successful tasks per 1,000 tokens than the most complex multi-agent architectures [10]. The one-agent-one-browser project fits that pattern: one agent plus one capable engineer produced a working result in three days [11].</p>
+<p><strong>UC San Diego/Cornell (December 2025).</strong> Experienced developers do not "vibe code". They control. Professionals retain agency in software design, insist on fundamental quality attributes and deploy explicit control strategies to manage agent behaviour [19]. Stack Overflow's 2025 survey confirms: 72% of developers say vibe coding is not part of their professional work [19].</p>
+<p><strong>METR: Algorithmic vs. Holistic Evaluation (August 2025).</strong> AI agents often produce functionally correct code that is not directly usable due to issues with test coverage, formatting and general code quality [20]. Automatic scoring as used by many benchmarks may overestimate real-world AI agent performance. This aligns with what we see in FastRender: code that looks like a browser at first glance, but does not compile.</p>
+<h2 id="what-we-can-learn-from-this">What we can learn from this</h2>
+<p>FastRender is an experiment. An expensive experiment with clear shortcomings, but an experiment we can learn from. The same applies to the criticism it received.</p>
+<p><strong>What it shows.</strong> AI agents can produce enormous amounts of code in a short time. The planner/worker/judge architecture is an interesting approach for future research. For well-specified domains with visual feedback loops, this produces usable results.</p>
+<p><strong>Where it falls short.</strong> The code is in the bottom 5% for maintainability [8]. It barely compiles [4]. And one developer with one agent produced comparable work in three days, in 20,000 lines instead of 3 million [11]. More agents and more tokens are not a substitute for architectural insight.</p>
+<p><strong>The practical lesson.</strong> The value of AI is not in unleashing agents on a problem. It is in orchestrating them well. That requires someone who knows which problems lend themselves to AI delegation, how to set up feedback loops and when to tighten the reins.</p>
+<p>The difference between FastRender and one-agent-one-browser is the difference between undirected AI and AI under the direction of a capable engineer. We are all learning how that works. Projects like FastRender, however imperfect, help with that.</p>
+<hr />
+<h2 id="references">References</h2>
+<p>[1] Cursor, "Scaling long-running autonomous coding", 14 January 2026.
+<a href="https://cursor.com/blog/scaling-agents">https://cursor.com/blog/scaling-agents</a></p>
+<p>[2] S. Willison, "FastRender: a browser built by thousands of parallel agents" (including interview with Wilson Lin), 23 January 2026.
+<a href="https://simonw.substack.com/p/fastrender-a-browser-built-by-thousands">https://simonw.substack.com/p/fastrender-a-browser-built-by-thousands</a></p>
+<p>[3] GitHub repository FastRender.
+<a href="https://github.com/wilsonzlin/fastrender">https://github.com/wilsonzlin/fastrender</a></p>
+<p>[4] embedding-shapes, "Cursor's latest browser experiment implied success without evidence", January 2026.
+<a href="https://emsh.cat/cursor-implied-success-without-evidence/">https://emsh.cat/cursor-implied-success-without-evidence/</a></p>
+<p>[5] EverydayAI Blog, "Cursor AI Browser Can't Compile: Developers Call It 'AI Slop'", 24 February 2026.
+<a href="https://everydayaiblog.com/cursor-ai-browser-cant-compile/">https://everydayaiblog.com/cursor-ai-browser-cant-compile/</a></p>
+<p>[6] The Register, "Cursor used agents to write a browser, proving AI can write shoddy code at scale", 22 January 2026.
+<a href="https://www.theregister.com/2026/01/22/cursor_ai_wrote_a_browser/">https://www.theregister.com/2026/01/22/cursor_ai_wrote_a_browser/</a></p>
+<p>[7] The Register, "Cursor is better at marketing than coding" (opinion), 26 January 2026.
+<a href="https://www.theregister.com/2026/01/26/cursor_opinion/">https://www.theregister.com/2026/01/26/cursor_opinion/</a></p>
+<p>[8] Software Improvement Group, "We analyzed the code of Cursor's AI-built browser FastRender", February 2026.
+<a href="https://www.softwareimprovementgroup.com/blog/quality-of-fastrender/">https://www.softwareimprovementgroup.com/blog/quality-of-fastrender/</a></p>
+<p>[9] GitHub Issue #115, "AI slop lol" (cost estimate), 28 January 2026.
+<a href="https://github.com/wilsonzlin/fastrender/issues/115">https://github.com/wilsonzlin/fastrender/issues/115</a></p>
+<p>[10] The Decoder, "Frontier Radar #1: From chatbots to problem solvers", January 2026.
+<a href="https://the-decoder.com/frontier-radar-1-from-chatbots-to-problem-solvers-the-state-of-ai-agents-in-2026/">https://the-decoder.com/frontier-radar-1-from-chatbots-to-problem-solvers-the-state-of-ai-agents-in-2026/</a></p>
+<p>[11] GitHub repository one-agent-one-browser (embedding-shapes).
+<a href="https://github.com/embedding-shapes/one-agent-one-browser">https://github.com/embedding-shapes/one-agent-one-browser</a></p>
+<p>[12] S. Willison, "One Human + One Agent = One Browser From Scratch", 27 January 2026.
+<a href="https://simonwillison.net/2026/Jan/27/one-human-one-agent-one-browser/">https://simonwillison.net/2026/Jan/27/one-human-one-agent-one-browser/</a></p>
+<p>[13] Hacker News, "Show HN: One Human + One Agent = One Browser From Scratch in 20K LOC", January 2026.
+<a href="https://news.ycombinator.com/item?id=46779522">https://news.ycombinator.com/item?id=46779522</a></p>
+<p>[14] HiWave Browser, homepage with RustKit engine information.
+<a href="https://www.hiwavebrowser.com/">https://www.hiwavebrowser.com/</a></p>
+<p>[15] METR, "Measuring AI Ability to Complete Long Tasks", March 2025.
+<a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/">https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/</a></p>
+<p>[16] The AI Digest, "A new Moore's Law for AI agents" (summary of METR data), 2025-2026.
+<a href="https://theaidigest.org/time-horizons">https://theaidigest.org/time-horizons</a></p>
+<p>[17] MIT Technology Review, "This is the most misunderstood graph in AI", 5 February 2026.
+<a href="https://www.technologyreview.com/2026/02/05/1132254/this-is-the-most-misunderstood-graph-in-ai/">https://www.technologyreview.com/2026/02/05/1132254/this-is-the-most-misunderstood-graph-in-ai/</a></p>
+<p>[18] METR, "Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity", July 2025.
+<a href="https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/">https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/</a></p>
+<p>[19] M. Mason, "AI Coding Agents in 2026: Coherence Through Orchestration, Not Autonomy", January 2026. Contains references to Google DORA Report 2025, UC San Diego/Cornell study (December 2025) and Stack Overflow survey 2025.
+<a href="https://mikemason.ca/writing/ai-coding-agents-jan-2026/">https://mikemason.ca/writing/ai-coding-agents-jan-2026/</a></p>
+<p>[20] METR, "Research Update: Algorithmic vs. Holistic Evaluation", August 2025.
+<a href="https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/">https://metr.org/blog/2025-08-12-research-update-towards-reconciling-slowdown-with-time-horizons/</a></p>
+<hr />
+<p><em>Jan Keijzer is founder of <a href="https://imperial-automation.eu">Imperial Automation</a>, an AI automation consultancy helping European businesses turn friction into flow. With a PhD in Nuclear Reactor Physics from TU Delft and 30+ years of software development experience, he helps organisations deploy AI effectively.</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../27/claudemd-doesnt-work-say-researchers-but-is-that-true/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CLAUDE.md Doesn&#39;t Work (Say Researchers). But Is That True?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                CLAUDE.md Doesn't Work (Say Researchers). But Is That True?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 Jan Keijzer &mdash; <a href="https://imperial-automation.eu" target="_blank" rel="noopener">Imperial Automation</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/jankeijzer" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://imperial-automation.eu" target="_blank" rel="noopener" title="imperial-automation.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm112 352h32c17.7 0 32 14.3 32 32v80h-96v-80c0-17.7 14.3-32 32-32M96 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M96 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["search.suggest", "toc.integrate", "navigation.tabs", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "content.tooltips", "content.tabs.link", "content.code.copy", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+      
+    
+  </body>
+</html>

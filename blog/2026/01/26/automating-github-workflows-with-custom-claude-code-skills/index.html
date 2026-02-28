@@ -1,0 +1,1933 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="How I transformed 30-minute GitHub workflows into 2-minute automated processes with custom Claude Code skills">
+      
+      
+      
+        <link rel="canonical" href="https://jan-keijzer.nl/blog/2026/01/26/automating-github-workflows-with-custom-claude-code-skills/">
+      
+      
+      
+        <link rel="next" href="../../../02/07/from-nuclear-physics-to-ai-why-fusions-digital-twin-matters/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/favicon-jk.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Automating GitHub Workflows with Custom Claude Code Skills - Jan Keijzer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/hero.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Automating GitHub Workflows with Custom Claude Code Skills - Jan Keijzer" />
+<meta property="og:description" content="How I transformed 30-minute GitHub workflows into 2-minute automated processes with custom Claude Code skills" />
+<meta property="og:image" content="https://jan-keijzer.nl/assets/images/social/blog/2026/01/26/automating-github-workflows-with-custom-claude-code-skills.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://jan-keijzer.nl/blog/2026/01/26/automating-github-workflows-with-custom-claude-code-skills/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Automating GitHub Workflows with Custom Claude Code Skills - Jan Keijzer" />
+<meta property="twitter:description" content="How I transformed 30-minute GitHub workflows into 2-minute automated processes with custom Claude Code skills" />
+<meta property="twitter:image" content="https://jan-keijzer.nl/assets/images/social/blog/2026/01/26/automating-github-workflows-with-custom-claude-code-skills.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#automating-github-workflows-with-custom-claude-code-skills" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Jan Keijzer" class="md-header__button md-logo" aria-label="Jan Keijzer" data-md-component="logo">
+      
+  <img src="../../../../../assets/profile80x80.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jan Keijzer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Automating GitHub Workflows with Custom Claude Code Skills
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../experience/" class="md-tabs__link">
+          
+  
+  
+  Experience
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Jan Keijzer" class="md-nav__button md-logo" aria-label="Jan Keijzer" data-md-component="logo">
+      
+  <img src="../../../../../assets/profile80x80.png" alt="logo">
+
+    </a>
+    Jan Keijzer
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experience
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Experience
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/zintouch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zintouch - Healthcare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/directorinsight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DirectorInsight - Finance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/abn-amro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ABN AMRO - Banking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../experience/esa-defense/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESA & Defense
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Blog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archive
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archive
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2026/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Categories
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Categories
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai-augmentation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Augmentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/ai-augmented-development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI-Augmented Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Compliance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/customer-service/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customer Service
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/developer-productivity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Productivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/innovation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Innovation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="../../../../../../../assets/profile.jpg" alt="Jan Keijzer">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          <a href="https://www.linkedin.com/in/jankeijzer/">Jan Keijzer</a>
+                        
+                      </strong>
+                      <br>
+                      AI Automation Consultant | 30+ Years Mission-Critical Systems Experience
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2026-01-26 00:00:00+00:00" class="md-ellipsis">January 26, 2026</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/ai-augmented-development/">AI-Augmented Development</a>, 
+                              <a href="../../../../category/developer-productivity/">Developer Productivity</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              7 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+            
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem-github-issue-management-takes-too-much-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem: GitHub Issue Management Takes Too Much Time
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution-systematic-ai-augmentation-through-custom-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Solution: Systematic AI Augmentation Through Custom Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Solution: Systematic AI Augmentation Through Custom Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-claude-code-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Are Claude Code Skills?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-skills-a-complete-issue-management-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Skills: A Complete Issue Management System
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Skills: A Complete Issue Management System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-workflow-in-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Workflow in Action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-decompose-break-down-large-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. /decompose - Break Down Large Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bug-create-bug-sub-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. /bug - Create Bug Sub-Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-update-tracking-refresh-progress-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. /update-tracking - Refresh Progress Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-extend-add-more-sub-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. /extend - Add More Sub-Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-sync-closes-ensure-complete-issue-closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. /sync-closes - Ensure Complete Issue Closure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-help-issues-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. /help-issues - Quick Reference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-workflow-skills-for-complete-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus: Workflow Skills for Complete Automation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-impact-the-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Impact: The Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works-under-the-hood" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works Under the Hood
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How It Works Under the Hood">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-propose-breakdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Propose Breakdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lessons-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lessons Learned
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lessons Learned">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-worked" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Worked
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-was-challenging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Was Challenging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#try-it-yourself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Try It Yourself
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the Skills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Next?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-in-touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get in Touch
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="automating-github-workflows-with-custom-claude-code-skills">Automating GitHub Workflows with Custom Claude Code Skills</h1>
+<p>If you've ever managed a large GitHub issue with multiple sub-tasks, you know the drill: create sub-issues one by one, set up a tracking PR, manually update status tables, ensure all the <code>Closes #XXX</code> statements are in sync. It's tedious, error-prone, and takes 20-30 minutes of pure overhead for each large feature.</p>
+<p>What if you could compress that entire workflow into a single command that takes 2 minutes?</p>
+<!-- more -->
+
+<h2 id="the-problem-github-issue-management-takes-too-much-time">The Problem: GitHub Issue Management Takes Too Much Time</h2>
+<p>Here's what managing a complex feature traditionally looks like:</p>
+<ol>
+<li><strong>Initial Decomposition</strong> (10-15 minutes):</li>
+<li>Read through the parent issue</li>
+<li>Manually create 3-5 sub-issues with proper formatting</li>
+<li>Set up a tracking PR with a status table</li>
+<li>Add <code>Closes #XXX</code> statements for each sub-issue</li>
+<li>
+<p>Link everything together</p>
+</li>
+<li>
+<p><strong>Ongoing Maintenance</strong> (5-10 minutes per update):</p>
+</li>
+<li>Check which sub-issues are complete</li>
+<li>Update the status table in the tracking PR</li>
+<li>Verify all PRs are linked correctly</li>
+<li>Add new sub-issues when bugs are discovered</li>
+<li>
+<p>Keep <code>Closes</code> statements synchronized</p>
+</li>
+<li>
+<p><strong>Final Merge</strong> (5 minutes):</p>
+</li>
+<li>Double-check all sub-issues are referenced</li>
+<li>Ensure nothing falls through the cracks</li>
+<li>Merge and hope GitHub auto-closes everything</li>
+</ol>
+<p><strong>Total overhead per feature:</strong> 30-45 minutes of pure administrative work. Multiply that by 10 features per month, and you've lost a full workday to GitHub bureaucracy.</p>
+<h2 id="the-solution-systematic-ai-augmentation-through-custom-skills">The Solution: Systematic AI Augmentation Through Custom Skills</h2>
+<p>Instead of fighting with GitHub's UI or writing one-off scripts, I built a suite of Claude Code skills that encode best practices into reusable automation. These skills transform complex workflows into simple commands.</p>
+<h3 id="what-are-claude-code-skills">What Are Claude Code Skills?</h3>
+<p><a href="https://claude.com/product/claude-code">Claude Code</a> is Anthropic's CLI tool that brings Claude's AI capabilities directly into your terminal. Skills are markdown-based extensions that teach Claude new workflows. Think of them as specialized functions that Claude can execute on your behalf.</p>
+<p>The key insight: <strong>AI augmentation requires systematic tooling, not ad-hoc prompts.</strong> Skills capture process knowledge and make it repeatable.</p>
+<h2 id="the-skills-a-complete-issue-management-system">The Skills: A Complete Issue Management System</h2>
+<p>I built six interconnected skills that handle the entire lifecycle of complex GitHub issues:</p>
+<p><img alt="GitHub Workflow Automation - Complete Lifecycle" src="../../../../images/workflow-diagram.svg" /></p>
+<h3 id="the-workflow-in-action">The Workflow in Action</h3>
+<h3 id="1-decompose-break-down-large-issues">1. <code>/decompose</code> - Break Down Large Issues</h3>
+<p>The starting point for any complex feature. This skill analyzes a parent issue and intelligently breaks it into manageable sub-issues.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/decompose<span class="w"> </span><span class="m">723</span>
+</span></code></pre></div>
+<p><strong>What it does:</strong></p>
+<ol>
+<li>Fetches the issue using <code>gh issue view</code></li>
+<li>Analyzes the structure (phases, checklists, dependencies)</li>
+<li>Proposes a breakdown with a clear table</li>
+<li>Creates sub-issues after confirmation</li>
+<li>Sets up a draft tracking PR with status table</li>
+<li>Links everything together with <code>Closes</code> statements</li>
+</ol>
+<p><strong>Example output:</strong></p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gu">## Proposed Sub-Issues for #723: Stripe Payment Provider</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>| #   | Sub-Issue Title                    | Depends On | Scope    |
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>| --- | ---------------------------------- | ---------- | -------- |
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>| 1   | Phase 1: Payment Abstraction Layer | -          | Backend  |
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>| 2   | Phase 2: Stripe Integration        | <span class="ni">#1</span>         | Backend  |
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>| 3   | Phase 3: Frontend Payment UI       | <span class="ni">#1</span>, <span class="ni">#2</span>     | Frontend |
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Create these sub-issues? (A/B/C)
+</span></code></pre></div>
+<p><strong>Time saved:</strong> 15 minutes → 2 minutes</p>
+<h3 id="2-bug-create-bug-sub-issues">2. <code>/bug</code> - Create Bug Sub-Issues</h3>
+<p>Found a bug while implementing a sub-issue? Don't break your flow.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># On branch issue-724-abstraction-layer</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>/bug<span class="w"> </span><span class="s2">&quot;Webhook signature verification fails in test mode&quot;</span>
+</span></code></pre></div>
+<p><strong>What it does:</strong></p>
+<ol>
+<li>Auto-detects parent issue from branch name (<code>issue-724-*</code>)</li>
+<li>Creates a bug issue with proper prefix: <code>🐛 [Parent #724] Bug: Webhook signature verification fails</code></li>
+<li>Adds it to the tracking PR</li>
+<li>Updates <code>Closes</code> statements automatically</li>
+</ol>
+<p><strong>Time saved:</strong> 5 minutes → 30 seconds</p>
+<h3 id="3-update-tracking-refresh-progress-status">3. <code>/update-tracking</code> - Refresh Progress Status</h3>
+<p>After merging a few sub-issue PRs, update the tracking PR to reflect current progress.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/update-tracking<span class="w"> </span><span class="m">727</span>
+</span></code></pre></div>
+<p><strong>What it does:</strong></p>
+<ol>
+<li>Fetches status of all sub-issues</li>
+<li>Checks for merged PRs linked to each sub-issue</li>
+<li>Updates status emojis (⏳ Pending → ✅ Complete)</li>
+<li>Recalculates progress percentage</li>
+</ol>
+<p><strong>Before:</strong>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>| #   | Sub-Issue                 | Status    | PR  |
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>| --- | ------------------------- | --------- | --- |
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>| 1   | <span class="ni">#724</span> - Abstraction Layer  | ⏳ Pending | -   |
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>| 2   | <span class="ni">#725</span> - Stripe Integration | ⏳ Pending | -   |
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>Progress: 0/2 (0%)
+</span></code></pre></div></p>
+<p><strong>After:</strong>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>| #   | Sub-Issue                 | Status        | PR   |
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>| --- | ------------------------- | ------------- | ---- |
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>| 1   | <span class="ni">#724</span> - Abstraction Layer  | ✅ Complete    | <span class="ni">#731</span> |
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>| 2   | <span class="ni">#725</span> - Stripe Integration | 🔄 In Progress | <span class="ni">#732</span> |
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>Progress: 1/2 (50%)
+</span></code></pre></div></p>
+<p><strong>Time saved:</strong> 5 minutes → 1 minute</p>
+<h3 id="4-extend-add-more-sub-issues">4. <code>/extend</code> - Add More Sub-Issues</h3>
+<p>Realized you need to tackle another phase? Extend the existing tracking PR instead of creating chaos.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/extend<span class="w"> </span><span class="m">723</span>
+</span></code></pre></div>
+<p><strong>What it does:</strong></p>
+<ol>
+<li>Finds the existing tracking PR</li>
+<li>Analyzes which tasks don't have sub-issues yet</li>
+<li>Proposes new sub-issues</li>
+<li>Adds them to the tracking PR and updates <code>Closes</code> statements</li>
+</ol>
+<p><strong>Key difference from <code>/decompose</code>:</strong> Works with existing structure, doesn't create a new PR.</p>
+<p><strong>Time saved:</strong> 10 minutes → 2 minutes</p>
+<h3 id="5-sync-closes-ensure-complete-issue-closure">5. <code>/sync-closes</code> - Ensure Complete Issue Closure</h3>
+<p>Before merging, verify all sub-issues will auto-close when the tracking PR is merged.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>/sync-closes<span class="w"> </span><span class="m">727</span>
+</span></code></pre></div>
+<p><strong>What it does:</strong></p>
+<ol>
+<li>Extracts all issue numbers from the status table</li>
+<li>Compares with <code>Closes #XXX</code> statements in PR body</li>
+<li>Identifies missing statements</li>
+<li>Adds them after confirmation</li>
+</ol>
+<p><strong>Example:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Current Closes: #723, #724, #725
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Found in table: #723, #724, #725, #730 (bug)
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Missing: #730
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Add &quot;Closes #730&quot; to PR? (y/n)
+</span></code></pre></div></p>
+<p><strong>Time saved:</strong> 5 minutes → 1 minute</p>
+<h3 id="6-help-issues-quick-reference">6. <code>/help-issues</code> - Quick Reference</h3>
+<p>Forgot the syntax? Get a quick reference card.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/help-issues
+</span></code></pre></div>
+<p>Returns the complete workflow guide with examples.</p>
+<h2 id="bonus-workflow-skills-for-complete-automation">Bonus: Workflow Skills for Complete Automation</h2>
+<p>Beyond issue management, I also created skills for the implementation workflow:</p>
+<ul>
+<li><strong><code>/implement &lt;issue&gt;</code></strong> - Full guided workflow: fetch issue, plan, create branch, implement, test, create PR</li>
+<li><strong><code>/cleanup</code></strong> - Post-merge cleanup: checkout base branch, fetch, pull, delete merged branch</li>
+<li><strong><code>/finish &lt;issue&gt;</code></strong> - Complete workflow: commit, close issue, merge to base, cleanup</li>
+</ul>
+<p>These encode mission-critical discipline into every step, ensuring nothing falls through the cracks.</p>
+<h2 id="real-impact-the-numbers">Real Impact: The Numbers</h2>
+<p>Let's quantify the time savings across a typical month:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Before</th>
+<th>After</th>
+<th>Per Month</th>
+<th>Saved</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Decompose 5 features</td>
+<td>15 min × 5</td>
+<td>2 min × 5</td>
+<td>75 min vs 10 min</td>
+<td><strong>65 min</strong></td>
+</tr>
+<tr>
+<td>Update tracking 20×</td>
+<td>5 min × 20</td>
+<td>1 min × 20</td>
+<td>100 min vs 20 min</td>
+<td><strong>80 min</strong></td>
+</tr>
+<tr>
+<td>Create 10 bug issues</td>
+<td>5 min × 10</td>
+<td>0.5 min × 10</td>
+<td>50 min vs 5 min</td>
+<td><strong>45 min</strong></td>
+</tr>
+<tr>
+<td>Sync before merge 5×</td>
+<td>5 min × 5</td>
+<td>1 min × 5</td>
+<td>25 min vs 5 min</td>
+<td><strong>20 min</strong></td>
+</tr>
+<tr>
+<td>Extend tracking 3×</td>
+<td>10 min × 3</td>
+<td>2 min × 3</td>
+<td>30 min vs 6 min</td>
+<td><strong>24 min</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total monthly savings: 234 minutes (3.9 hours)</strong></p>
+<p>But the real value isn't just time—it's <strong>consistency</strong>. Every decomposition follows the same structure. Every tracking PR has the same format. Every <code>Closes</code> statement is synchronized. Zero human error.</p>
+<h2 id="how-it-works-under-the-hood">How It Works Under the Hood</h2>
+<p>Each skill is a markdown file in <code>~/.claude/skills/&lt;skill-name&gt;/SKILL.md</code> with three key sections:</p>
+<ol>
+<li>
+<p><strong>Metadata</strong> (YAML frontmatter):
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nn">---</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">decompose</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Decompose a large GitHub issue into sub-issues</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nt">argument-hint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;issue-number&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="nt">user-invocable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nn">---</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Workflow Instructions:</strong>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gu">## Workflow</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="gu">### Step 1: Fetch and Analyze</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>```bash
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>gh issue view $ARGUMENTS --json title,body,labels
+</span></code></pre></div>
+Analyze phases, dependencies, logical groupings...</p>
+</li>
+</ol>
+<h3 id="step-2-propose-breakdown">Step 2: Propose Breakdown</h3>
+<p>Present table to user with A/B/C options...
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>3. **Error Handling &amp; Best Practices:**
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>```markdown
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>## Important Notes
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>- Always ask before creating
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>- Preserve original content
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>- Use consistent naming: `issue-[number]-[feature]`
+</span></code></pre></div></p>
+<p>When you invoke <code>/decompose 723</code>, Claude:
+1. Loads the skill prompt
+2. Substitutes <code>$ARGUMENTS</code> with <code>723</code>
+3. Executes the workflow step-by-step
+4. Uses <code>gh</code> CLI for GitHub operations
+5. Asks for confirmation at critical points</p>
+<h2 id="lessons-learned">Lessons Learned</h2>
+<h3 id="what-worked">What Worked</h3>
+<p><strong>1. Encoding best practices directly in skills</strong></p>
+<p>Instead of remembering to add <code>Closes</code> statements, the skill does it automatically. Instead of manually formatting status tables, the skill uses a template.</p>
+<p><strong>2. Confirmation gates at the right places</strong></p>
+<p>Skills ask for user confirmation before creating issues/PRs, but automate everything else. This balances control with efficiency.</p>
+<p><strong>3. Smart defaults with explicit overrides</strong></p>
+<p>Branch name detection auto-extracts issue numbers (<code>issue-724-*</code> → <code>#724</code>), but you can always provide explicit parameters.</p>
+<p><strong>4. Composable workflows</strong></p>
+<p>Skills work independently but integrate seamlessly. <code>/bug</code> automatically updates the tracking PR created by <code>/decompose</code>.</p>
+<h3 id="what-was-challenging">What Was Challenging</h3>
+<p><strong>1. Handling edge cases gracefully</strong></p>
+<p>What if the tracking PR doesn't exist? What if the branch name doesn't follow conventions? The skills need defensive checks without becoming brittle.</p>
+<p><strong>2. Balancing automation with transparency</strong></p>
+<p>Users need to see what's happening (especially with GitHub API calls), but too much output is noise. I settled on showing key operations with clear progress indicators.</p>
+<p><strong>3. GitHub CLI quirks</strong></p>
+<p>The <code>gh</code> CLI is powerful but has subtle behaviors (like how it handles multi-line PR bodies). Skills need to use heredocs and proper escaping.</p>
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>This project embodies what I mean by <strong>AI augmentation for mission-critical systems</strong>:</p>
+<ol>
+<li><strong>Systematic, not ad-hoc</strong> - Skills capture repeatable processes, not one-off prompts</li>
+<li><strong>Reliable and predictable</strong> - Same input always produces same output</li>
+<li><strong>Human-in-the-loop</strong> - Automation handles tedium, humans make decisions</li>
+<li><strong>Fail-safe design</strong> - Confirmation gates prevent destructive operations</li>
+</ol>
+<p>This is the same discipline I apply when architecting AI systems for finance, healthcare, and defense clients—but scaled down to developer productivity.</p>
+<p>The meta-lesson: <strong>Effective AI augmentation requires treating automation itself as mission-critical infrastructure.</strong> These skills aren't clever hacks; they're maintainable, testable, documented tools.</p>
+<h2 id="try-it-yourself">Try It Yourself</h2>
+<p>Want to build your own Claude Code skills? Here's how to start:</p>
+<ol>
+<li>
+<p><strong>Install Claude Code</strong>: Follow the instructions at <a href="https://claude.com/product/claude-code">claude.com/product/claude-code</a></p>
+</li>
+<li>
+<p><strong>Create a skill directory:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.claude/skills/my-skill
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Write a skill file</strong> (<code>~/.claude/skills/my-skill/SKILL.md</code>):
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nn">---</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-skill</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">What your skill does</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="nt">user-invocable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="nn">---</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="c1"># My Skill</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="l l-Scalar l-Scalar-Plain">Help the user accomplish [specific task].</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="l l-Scalar l-Scalar-Plain">## Input</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="l l-Scalar l-Scalar-Plain">The user provides</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="err">`</span><span class="l l-Scalar l-Scalar-Plain">$ARGUMENTS`</span>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="c1">## Workflow</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="l l-Scalar l-Scalar-Plain">1. Do this</span>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="l l-Scalar l-Scalar-Plain">2. Then that</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="l l-Scalar l-Scalar-Plain">3. Finally this</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Restart Claude Code</strong> to reload skills</p>
+</li>
+<li>
+<p><strong>Test it:</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>/my-skill<span class="w"> </span>some-argument
+</span></code></pre></div></p>
+</li>
+</ol>
+<p>The complete source for my issue management skills is available in my <code>~/.claude/skills/</code> directory. Check the <a href="https://github.com/anthropics/claude-code">README.md</a> for detailed documentation.</p>
+<h2 id="get-the-skills">Get the Skills</h2>
+<p>All six issue management skills plus the workflow automation skills are now available as open source:</p>
+<p><strong><a href="https://github.com/JanKeijzer/claude-code-toolkit">View on GitHub →</a></strong></p>
+<p>The repository includes:</p>
+<ul>
+<li>Complete skill source code for all 9 skills</li>
+<li>Installation instructions</li>
+<li>Usage examples and demos</li>
+<li>Best practices guide</li>
+</ul>
+<h2 id="whats-next">What's Next?</h2>
+<p>I'm exploring skills for:</p>
+<ul>
+<li><strong>Code review automation</strong> - Extract common patterns from review feedback and apply them systematically</li>
+<li><strong>Migration workflows</strong> - Multi-step codebase migrations with checkpoints and rollback</li>
+<li><strong>Documentation generation</strong> - Auto-generate API docs from code with intelligent summaries</li>
+</ul>
+<p>The potential for AI augmentation through systematic tooling is enormous. We're just scratching the surface.</p>
+<h2 id="get-in-touch">Get in Touch</h2>
+<p>If you're interested in AI augmentation for your team's workflows—or need help architecting AI systems with mission-critical reliability—<a href="https://calendly.com/imperial-automation/introduction-call">let's talk</a>.</p>
+<p>I'd also love to hear about the workflows you'd automate if you had the right tools. What takes 30 minutes today that could take 2 minutes tomorrow?</p>
+<hr />
+<p><strong>Want to discuss your AI automation challenges?</strong> <a href="https://calendly.com/imperial-automation/introduction-call">Schedule a call</a> or <a href="https://linkedin.com/in/jankeijzer">connect on LinkedIn</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="../../../02/07/from-nuclear-physics-to-ai-why-fusions-digital-twin-matters/" class="md-footer__link md-footer__link--next" aria-label="Next: From Nuclear Physics to AI: Why Fusion&#39;s Digital Twin Matters">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                From Nuclear Physics to AI: Why Fusion's Digital Twin Matters
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2025 Jan Keijzer &mdash; <a href="https://imperial-automation.eu" target="_blank" rel="noopener">Imperial Automation</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/jankeijzer" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://imperial-automation.eu" target="_blank" rel="noopener" title="imperial-automation.eu" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64zm112 352h32c17.7 0 32 14.3 32 32v80h-96v-80c0-17.7 14.3-32 32-32M96 112c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16M96 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16zm144-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-32c0-8.8 7.2-16 16-16"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["search.suggest", "toc.integrate", "navigation.tabs", "navigation.expand", "navigation.sections", "navigation.instant", "navigation.instant.prefetch", "content.tooltips", "content.tabs.link", "content.code.copy", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+      
+    
+  </body>
+</html>
