@@ -1,24 +1,22 @@
 ---
-title: Case Studies
-description: Datalumina B.V. is a data, analytics, and artificial intelligence company founded by Dave Ebbelaar to help businesses integrate AI and data into their operations. 
+title: Portfolio
+description: AI automation and software engineering projects delivered by Jan Keijzer through Imperial Automation. Real client work, real results.
 ---
 
-# Featured Projects
+# Portfolio
 
-Welcome to my portfolio of data science and AI projects. Each project demonstrates my expertise in delivering impactful solutions to real-world business challenges.
+Selected projects from my work as an independent AI automation consultant. Each case study covers a real business problem, what I built to solve it, and the measurable outcome.
+
+---
 
 <div class="grid cards" markdown>
 
--   [AI Customer Care Bot for Dev X](projects/project-1.md)
+-   :material-palette:{ .lg .middle } **Let's Art Amsterdam**
 
     ---
 
-    An AI-powered chatbot solution for Dev X that enables customer service transformation, featuring Slack integration and sub-3 second response times. Built with OpenAI, Pinecone, and Azure cloud infrastructure to achieve 100% accuracy on initial datasets.
+    Unblocked a creative marketplace launch by rebuilding their Stripe Connect payment flow in one week — after three weeks of stalled progress. iDEAL, automatic commission splits, and compliant invoicing.
 
--   [Enterprise Chatbot for Company Y](projects/project-2.md)
-
-    ---
-
-    A private ChatGPT-like tool for the Company Y that revolutionizes mobility data analysis by combining structured SQL data with unstructured policy documents. Built with OpenAI and modern cloud architecture for comprehensive public sector policy evaluation.
+    [Read more :material-arrow-right:](projects/letsart.md){ .md-button }
 
 </div>
