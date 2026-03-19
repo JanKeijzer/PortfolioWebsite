@@ -1,0 +1,112 @@
+/* Typography */
+:root {
+  --md-text-font: system-ui, -apple-system, Arial, sans-serif;
+  --md-code-font: "Roboto Mono", monospace;
+}
+
+/* Round profile logo in header */
+.md-header .md-logo img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Light theme custom colors */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1E3A8A; /* Navy - primary brand color */
+  --md-accent-fg-color: #3B82F6; /* Blue - secondary brand color */
+  --md-typeset-a-color: var(--md-accent-fg-color);
+  --md-footer-bg-color: var(--md-primary-fg-color);
+  --md-default-bg-color: #F3F4F6; /* Light grey background */
+  --md-typeset-color: #1A1A1A; /* Black for text */
+}
+
+/* Dark theme custom colors */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1E3A8A; /* Navy - keep consistent */
+  --md-default-bg-color: #090d1d; /* Dark background */
+  --md-accent-fg-color: #93C5FD; /* Light blue for dark mode */
+  --md-typeset-a-color: var(--md-accent-fg-color);
+  --md-code-bg-color: #1A1A1A;
+}
+
+/* Primary Button - Navy background, white text (per brand guidelines) */
+.md-button--primary {
+  background-color: #1E3A8A;
+  color: white;
+  border-color: #1E3A8A;
+}
+
+.md-button--primary:hover {
+  background-color: #3B82F6;
+  border-color: #3B82F6;
+}
+
+/* CTA Button - Gold background, navy text (per brand guidelines) */
+.md-button.cta {
+  background-color: #FCD34D;
+  color: #1E3A8A;
+  border-color: #FCD34D;
+}
+
+.md-button.cta:hover {
+  background-color: #FDE68A;
+  border-color: #FDE68A;
+}
+
+/* Dark mode button adjustments */
+[data-md-color-scheme="slate"] .md-button {
+  background-color: #93C5FD;
+  border-color: #93C5FD;
+  color: #1A1A1A;
+}
+
+[data-md-color-scheme="slate"] .md-button:hover {
+  background-color: #FDE68A;
+  border-color: #FDE68A;
+  color: #1A1A1A;
+}
+
+/* Footer */
+.md-footer {
+  background-color: #1E3A8A; /* Navy */
+}
+
+.md-footer-meta {
+  background-color: #1A1A1A; /* Black */
+}
+
+/* Testimonial cards */
+.grid.cards.testimonials {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+
+.grid.cards.testimonials > * {
+    margin-top: 0 !important;
+}
+
+/* Style the author name and title */
+.grid.cards.testimonials p:nth-child(2) {
+    margin-top: -0.5rem;
+    color: var(--md-default-fg-color--light);
+    font-size: 0.9rem;
+}
+
+/* Ariadne Thread — subtle flowing curve below header */
+.md-header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 20px;
+  margin-top: -1px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 20' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%231E3A8A'/%3E%3Cstop offset='40%25' stop-color='%233B82F6'/%3E%3Cstop offset='100%25' stop-color='%23FCD34D'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 10 Q360 0 720 10 T1440 10' fill='none' stroke='url(%23g)' stroke-width='2'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .md-header::after {
+  opacity: 0.25;
+}
